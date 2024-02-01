@@ -1,0 +1,612 @@
+
+html, body {
+    background-color: rgb(190, 190, 190);
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    overscroll-behavior: none;
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.joeshomelogo{
+    height: 500px;
+    width: 700px;
+    margin: 10px;
+}
+
+.selectionpara{
+    white-space: normal;
+    word-break: break-all;
+}
+
+ol{
+    width: 2%;
+    margin-top: 3%;
+    margin-left: 5%;
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+
+.text{
+    display: inline-block;
+}
+
+.review{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 5000rem;
+    text-align: center;
+    font-size: 300%;
+    margin-top: 5%;
+    margin-bottom: 3%
+}
+
+table {
+  font-family: 'Montserrat', sans-serif;
+  border-collapse: collapse;
+  width: 90%;
+  margin: 3% 0 0 2%;
+  font-size: 200%;
+  margin-inline: auto;
+}
+
+td, th {
+  border: 0.4rem solid black;
+  text-align: left;
+  padding: 2%;
+}
+
+tr:nth-child(even) {
+  background-color: #9f9f9f;
+}
+
+.socials{
+    width: 3rem;
+    margin: 2% 2% 2%;
+}
+
+.socials:hover{
+    -webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    -ms-transition: all .2s ease;
+    transition: all .2s ease;
+
+}
+
+footer {
+    background-color: rgb(229, 0, 0);
+    height: auto;
+    padding-top: 3%;
+    color: white;
+    bottom: 0;
+  }
+
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer-content h3{
+    font-size: 2rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+
+.footer-content p{
+    min-width: 1rem;
+    margin: 3% auto;
+    line-height: 14%;
+    font-size: 1.1rem;
+}
+
+.footer-bottom p {
+    max-width: 100%;
+}
+
+.social-list{
+    display: flex;
+}
+
+.social-list a{
+    margin: 1rem 1rem 2rem 1rem;
+}
+
+.footer-content a{
+    text-decoration: none;
+    color: white;
+}
+
+.footer-content p{
+    min-width: 1rem;
+    margin: 3rem auto;
+    line-height: 14%;
+    font-size: 1.1rem;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(2, 61, 134);
+    color: white;
+    padding: 1rem;
+}
+
+.brand{
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-left: .8rem;
+}
+
+.navbar-links ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar-links li{
+    list-style: none;
+    text-decoration: none;
+    margin: 0 1rem 0 1rem;
+    font-size: 1rem;
+    font-weight: 200;
+}
+
+.navbar-links li a{
+    color: white;
+    display: block;
+}
+
+li::after {
+    content: '';
+    width: 0rem;
+    height: 0.15rem;
+    background-color: rgb(229, 0, 0);
+    display: block;
+    border-radius: 0.2rem;
+    margin: 0.2rem auto 0 auto;
+    transition: all 0.1s ease-in-out;
+}
+
+li:hover::after {
+    width: 1rem;
+}
+
+.container {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 5rem;
+}
+
+.hometopbuttons{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+.buttons{
+    border-radius: 1rem;
+    border: none;
+    background-color: white;
+    padding: 1rem;
+}
+
+.buttons:hover{
+    background-color: rgb(229, 0, 0);
+    color: white;
+}
+
+.hmove{
+    display: flex;
+    position: relative;
+    top: 0; right: 0;
+}
+
+.hslide{
+    width: 100%;
+    flex-shrink: 0;
+    aspect-ratio: 16 / 9;
+    scroll-snap-type: x mandatory;
+}
+
+.hwrap{
+    width: 800px;
+    height: 500px;
+    margin: 2rem;
+    overflow: hidden;
+    background: rgb(2, 61, 134);
+    justify-content: center;
+    align-content: center;
+}
+
+.pic{
+    width: 90%;
+    height: 30rem;
+    object-fit: cover;
+    padding: 1rem;
+}
+@keyframes slideh {
+    0% {right: 0%;}
+    10% {right: 0%;}
+    20% {right: 100%;}
+    30% {right: 100%;}
+    40% {right: 200%;}
+    50% {right: 200%;}
+    60% {right: 300%;}
+    70% {right: 300%;}
+    80% {right: 400%;}
+    90% {right: 400%;}
+}
+.hmove { animation: slideh linear 40s infinite; }
+
+
+
+.container form{
+    width: 100%;
+    border: .12rem solid black;
+    border-radius: .5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.container form input{
+    border: none;
+    border-radius: .5rem;
+    outline: none;
+    width: 100%;
+    font-size: 1.2rem;
+    font-weight: 400;
+    padding: .5rem 1rem;
+}
+
+.container form span{
+    padding-left: 1rem;
+}
+.buttons2{
+    border: none;
+    background-color: whitesmoke;
+    border-radius: .5rem;
+    padding: .4rem;
+    margin-top: 3rem;
+}
+
+.buttons2:hover{
+    background-color: rgb(229, 0, 0);
+    color: white;
+}
+
+.signup-box{
+    width: 380px;
+    height: 640px;
+    margin: 25px;
+    background-color: white;
+    border-radius: 3px;
+    padding: 15px;
+}
+
+.signup-box h1{
+    text-align: center;
+    padding-top: 15px;
+}
+
+.signup-box h4{
+    text-align: center;
+    padding-top: 10px;
+}
+
+.signup-box form{
+    width: 300px;
+    margin-left: 20px;
+}
+
+.signup-box form label{
+    display: flex;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.signup-box form input{
+    width: 100%;
+    padding: 7px;
+    border: none;
+    border: 1px solid gray;
+    border-radius: 6px;
+    outline: none;
+}
+
+.signup-box form button{
+    width: 100%;
+    height: 35px;
+    margin-top: 20px;
+    border: none;
+    background-color: rgb(229, 0, 0);
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    
+}
+
+.signup-box form button:hover{
+    transition: ease .3s;
+    background-color: rgb(2, 61, 134);
+    color: white;
+}
+
+.signup-box p{
+    text-align: center;
+    padding: 15px;
+    font-size: 15px;
+}
+
+.signup-box h3{
+    text-align: center;
+    color: red;
+}
+
+.signup-box h2{
+    text-align: center;
+    color: green;
+}
+
+.adminbtn{
+    width: 100%;
+    height: 35px;
+    margin-top: 20px;
+    background-color: lightblue;
+    border: 1px solid rgb(80, 171, 212);
+}
+
+.adminbtn:hover {
+    background-color: rgb(70, 181, 218);
+}
+
+.signin-box{
+    width: 380px;
+    height: 450px;
+    margin: 25px;
+    background-color: white;
+    border-radius: 3px;
+    padding: 15px;
+}
+
+.signin-box h1{
+    text-align: center;
+    padding-top: 15px;
+}
+
+.signin-box h4{
+    text-align: center;
+    padding-top: 10px;
+}
+
+.signin-box form{
+    width: 300px;
+    margin-left: 20px;
+}
+
+.signin-box form label{
+    display: flex;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.signin-box form input{
+    width: 100%;
+    padding: 7px;
+    border: none;
+    border: 1px solid gray;
+    border-radius: 6px;
+    outline: none;
+}
+
+.signin-box form button{
+    width: 100%;
+    height: 35px;
+    margin-top: 20px;
+    border: none;
+    background-color: rgb(229, 0, 0);
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    
+}
+
+.signin-box form button:hover{
+    transition: ease .3s;
+    background-color: rgb(2, 61, 134);
+    color: white;
+}
+
+.signin-box p{
+    text-align: center;
+    padding: 15px;
+    font-size: 15px;
+}
+
+.signin-box h3{
+    text-align: center;
+    color: red;
+}
+
+.signin-box h2{
+    text-align: center;
+    color: green;
+}
+
+
+
+.adminPanel {
+    background-color: white;
+    width: 400px;
+    height: 600px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 20px;
+    overflow-y: scroll;
+}
+
+.adminPanel form input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border: 1px solid gray;
+    border-radius: 6px;
+    outline: none;
+}
+
+.adminPanel form button {
+    width: 100%;
+    height: 35px;
+    margin-top: 20px;
+    border: none;
+    background-color: rgb(229, 0, 0);
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.adminPanel form button:hover {
+    transition: ease .3s;
+    background-color: rgb(2, 61, 134);
+    color: white;
+}
+
+.body-wraper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-shrink: 0;
+}
+
+.shop {
+    width: 90%;
+    height: 700px;
+    background-color: white;
+    border-radius: 10px;
+    margin: 40px;
+    overflow-y: scroll;
+}
+
+.card {
+    padding: 10px;
+    margin: 10px;
+    border: solid .5px black;
+    border-radius: 5px;
+    width: 300px;
+}
+
+.card-img-top {
+    width: 250px;
+    height: 200px;
+}
+
+.shopBtn {
+    border: none;
+    background-color: white;
+    padding: 10px;
+    background-color: rgb(229, 0, 0);
+    color: white;
+}
+
+.shopBtn:hover {
+    background-color: rgb(2, 61, 134);
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.filler {
+    height: 150px;
+}
+
+.toggle-button {
+    position: absolute;
+    top: 1.25rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+@media (max-width: 1000px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+    }
+
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+       display: none;
+       width: 100%;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links ul li {
+        text-align: center;
+        padding: 18px;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+
+    .joeshomelogo {
+        height: 200px;
+    width: 400px;
+    margin: 0;
+    }
+
+   .buttons {
+    display: none;
+   }
+
+   .hwrap {
+    display: none;
+   }
+
+   .container {
+    margin: 20px;
+    padding: 20px;
+   }
+}

@@ -1,0 +1,14 @@
+li::after {
+    content: '';
+    width: 0rem;
+    height: 0.15rem;
+    background-color: rgb(229, 0, 0);
+    display: block;
+    border-radius: 0.2rem;
+    margin: 0.2rem auto 0 auto;
+    transition: all 0.1s ease-in-out;
+}
+
+li:hover::after {
+    width: 1rem;
+}
